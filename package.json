@@ -1,0 +1,30 @@
+{
+  "name": "EventKeeper",
+  "version": "1.0.0",
+  "description": "Event keeper with telegram bot",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinamiryuk/EventKeeper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alinamiryuk/EventKeeper/issues"
+  },
+  "homepage": "https://github.com/alinamiryuk/EventKeeper#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.8",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  }
+}
