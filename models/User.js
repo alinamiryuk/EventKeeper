@@ -1,4 +1,4 @@
-const {Schema, model, Types} = require('mongoose')
+const { Schema, model, Types } = require('mongoose')
 
 const userSchema = Schema({
   userName: {
@@ -15,8 +15,10 @@ const userSchema = Schema({
     type: String,
     required: true,
   },
-notes: [{
-  type: Types.ObjectId,
-  ref: 'Event'
-}]
+  notes: [
+    {
+      type: Types.ObjectId,
+      ref: 'Event',
+    },
+  ],
 })

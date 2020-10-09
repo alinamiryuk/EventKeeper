@@ -104,4 +104,4 @@ dist
 .tern-port
 
 /config/
-/id_rsa_priv
+id_rsa_priv.pem

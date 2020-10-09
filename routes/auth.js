@@ -1,7 +1,7 @@
 const express = require('express')
 const bcrypt = require('bcrypt')
 const User = require('../models/User')
-const errorHandler = require('../utils/errorHandler')
+const errorHandler = require("../utils/errorHandler")
 const issueJWT = require('../utils/issueJWT')
 const router = express.Router()
 
