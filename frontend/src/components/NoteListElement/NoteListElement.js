@@ -10,35 +10,53 @@ export const NoteListElement = ({ note }) => {
 
   return (
     <>
-      <li>
-        <input type="checkbox" />
-        {note.title}
-        <button onClick={() => dispatch(deleteNote(note.id))}>DELETE</button>
-        <button onClick={() => setEditArea(state => !state)}>EDIT</button>
+      <li class="collection-item">
+        <div class="container center-align">
+          <h5>{note.title} </h5>
+          <p>{note.text}</p>
+          <button
+            onClick={() => dispatch(deleteNote(note.id))}
+            class="secondary-content btn-floating waves-effect waves-light blue-grey darken-4"
+          >
+            <i class="material-icons">delete</i>
+          </button>
+          <button
+            onClick={() => setEditArea((state) => !state)}
+            class="secondary-content btn-floating waves-effect waves-light blue-grey darken-4"
+          >
+            <i class="material-icons">edit</i>
+          </button>
 
-        {editArea ? (
-          <>
-            <input
-              value={newTitle}
-              onChange={(e) => setNewTitle(e.target.value)}
-            />
-            <textarea
-              value={newText}
-              onChange={(e) => setNewText(e.target.value)}
-            />
-            <button onClick={() => setEditArea(state => !state)}>CLOSE</button>
-            <button
-              onClick={() => {
-                dispatch(editNote(note.id, newTitle, newText))
-                setEditArea(state => !state)
-                setNewTitle('')
-                setNewText('')
-              }}
-            >
-              SAVE
-            </button>
-          </>
-        ) : null}
+          {editArea ? (
+            <div class="container center-align">
+              <input
+                value={newTitle}
+                onChange={(e) => setNewTitle(e.target.value)}
+              />
+              <textarea
+                value={newText}
+                onChange={(e) => setNewText(e.target.value)}
+              />
+              <button
+                onClick={() => setEditArea((state) => !state)}
+                class="btn-floating waves-effect waves-light blue-grey darken-4"
+              >
+                <i class="material-icons">close</i>
+              </button>
+              <button
+                onClick={() => {
+                  dispatch(editNote(note.id, newTitle, newText))
+                  setEditArea((state) => !state)
+                  setNewTitle('')
+                  setNewText('')
+                }}
+                class="btn-floating waves-effect waves-light blue-grey darken-4"
+              >
+                <i class="material-icons">save</i>
+              </button>
+            </div>
+          ) : null}
+        </div>
       </li>
     </>
   )
