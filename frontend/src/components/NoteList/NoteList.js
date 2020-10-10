@@ -7,7 +7,7 @@ const notes = useSelector(store => store)
 
   return (
     <>
-    <ul>
+    <ul class="collection center-align">
       {notes.map(note => (<NoteListElement key={note.id} note={note} />))}
     </ul>
     </>
