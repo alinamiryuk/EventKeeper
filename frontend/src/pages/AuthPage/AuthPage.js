@@ -1,10 +1,10 @@
 import React from 'react'
 
-export const Auth = () => {
+export const AuthPage = () => {
 
   return (
     <>
-    Auth
+    AuthPage
     </>
   )
 }
