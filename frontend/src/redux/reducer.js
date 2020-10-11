@@ -10,7 +10,7 @@ export const reducer = (state = initialState, action) => {
         {
           id: state.length === 0 ? 1 : state[state.length - 1].id + 1,
           title: action.payload.title,
-          note: action.payload.text,
+          text: action.payload.text,
           completed: false,
         }
       ]
@@ -19,7 +19,7 @@ export const reducer = (state = initialState, action) => {
         return state.filter(note => note.id !== action.payload)
 
         case EDIT_NOTE:
-          return state.map(note => note.id === action.payload.id ? {...note, title: action.payload.newTitle, text: action.payload.newText} : null)
+          return state.map(note => note.id === action.payload.id ? {...note, title: action.payload.newTitle, text: action.payload.newText} : note)
     default:
       return state
   }
