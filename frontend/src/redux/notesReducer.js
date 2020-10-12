@@ -2,7 +2,7 @@ import { CREATE_NOTE, DELETE_NOTE, EDIT_NOTE } from './actionTypes'
 
 const initialState = []
 
-export const reducer = (state = initialState, action) => {
+export const notesReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_NOTE:
       return [

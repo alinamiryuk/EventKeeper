@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { NoteListElement } from '../NoteListElement/NoteListElement'
 
 export const NoteList = () => {
-const notes = useSelector(store => store)
+const notes = useSelector(store => store.notes)
 
   return (
     <>

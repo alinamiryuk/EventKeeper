@@ -7,7 +7,7 @@ export const useRoutes = (auth) => {
   if (auth) {
     return (
       <Switch>
-        <Route path="/" exact>
+        <Route path="/">
           <AppPage />
         </Route>
         <Redirect to="/" />
@@ -16,7 +16,7 @@ export const useRoutes = (auth) => {
   }
   return (
     <Switch>
-      <Route path="/auth" exact>
+      <Route path="/auth">
         <AuthPage />
       </Route>
       <Redirect to="/auth" />
