@@ -28,17 +28,17 @@ export const editNote = (id, newTitle, newText) => {
   }
 }
 
-export const loginAuth = (success, user) => {
+export const loginAuth = (user) => {
   return {
     type: LOGIN_AUTH,
-    payload: { success, user },
+    payload: { success: user.success, user },
   }
 }
 
-export const signupAuth = (success, user) => {
+export const signupAuth = (user) => {
   return {
     type: SIGNUP_AUTH,
-    payload: { success, user },
+    payload: { success: user.success, user },
   }
 }
 

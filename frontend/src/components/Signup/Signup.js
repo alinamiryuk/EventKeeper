@@ -11,7 +11,7 @@ export const Signup = () => {
   const [state, setState] = useForm({ email: '', password: '', userName: '' })
 
   useEffect(() => {
-    if (status) history.push('/')
+    if (status) history.push('/auth')
   }, [status])
   
   return (
