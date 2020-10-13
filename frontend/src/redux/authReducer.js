@@ -1,4 +1,4 @@
-import { LOGIN_AUTH, SIGNUP_AUTH } from './actionTypes'
+import { LOGIN_AUTH, SIGNUP_AUTH, LOGOUT_AUTH } from './actionTypes'
 
 const initialState = JSON.parse(localStorage.getItem('user')) || {
   success: false,
@@ -10,8 +10,10 @@ export const authReducer = (state = initialState, action) => {
     case LOGIN_AUTH:
       return {...state, ...action.payload.user, registered: action.payload.success, success: action.payload.success}
     case SIGNUP_AUTH:
-      return {...state, registered: action.payload.success, ...action.payload.user, success: action.payload.success}
-    default:
+      return {...state, ...action.payload.user, registered: action.payload.success, success: action.payload.success}
+    case LOGOUT_AUTH: 
+    return action.payload
+      default:
       return state
   }
 }
