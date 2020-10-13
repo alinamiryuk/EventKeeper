@@ -1,5 +1,4 @@
 {
   "port": 4000,
   "dbkey": "mongodb+srv://alinamiryuk:p1417@cluster0.r4a91.azure.mongodb.net/event-keeper?retryWrites=true&w=majority"
-  
 }
