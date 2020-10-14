@@ -11,7 +11,7 @@ export const Login = () => {
   const [state, setState] = useForm({ userName: '', password: '' })
 
   useEffect(() => {
-    if (status) history.push('/auth')
+    if (status) history.push('/')
   }, [status])
 
   return (

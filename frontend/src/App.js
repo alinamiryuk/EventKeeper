@@ -4,12 +4,13 @@ import { useRoutes } from './hooks/useRoutes'
 import 'materialize-css'
 
 function App() {
-  const routes = useRoutes(false)
+  const token = JSON.parse(localStorage.getItem('user'))
+  const checkAuth = !!token
+  const routes = useRoutes(checkAuth)
+  
   return (
     <BrowserRouter>
-    <div className="container">
-      {routes}
-    </div>
+      <div className="container">{routes}</div>
     </BrowserRouter>
   )
 }
