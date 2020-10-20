@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Event keeper with telegram bot",
   "main": "server.js",
-  
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
@@ -11,7 +10,7 @@
     "frontend-install": "npm install --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\""
   },
-   "keywords": [],
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -21,7 +20,9 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.8",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",

@@ -1,4 +1,3 @@
-import { STATES } from 'mongoose'
 import { useState } from 'react'
 
 export const useForm = (initialState) => {
@@ -9,7 +8,7 @@ export const useForm = (initialState) => {
     const name = e.target.name
     const value = e.target.value
 
-    setState({ ...STATES, [name]: value })
+    setState({ ...state, [name]: value })
   }
   return [state, changeField]
 }

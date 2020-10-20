@@ -7,7 +7,7 @@ import { fetchLoginAuth } from '../../redux/actions'
 export const Login = () => {
   const dispatch = useDispatch()
   const history = useHistory()
-  const status = useSelector((state) => state.auth?.success)
+  const status = useSelector((state) => state.user?.success)
   const [state, setState] = useForm({ userName: '', password: '' })
 
   useEffect(() => {
@@ -22,6 +22,7 @@ export const Login = () => {
             placeholder="USERNAME"
             id="userName"
             type="text"
+            name="userName"
             class="validate"
             value={state.userName}
             onChange={setState}
@@ -32,6 +33,7 @@ export const Login = () => {
             id="password"
             type="password"
             class="validate"
+            name="password"
             placeholder="PASSWORD"
             value={state.password}
             onChange={setState}
