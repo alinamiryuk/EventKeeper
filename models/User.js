@@ -1,6 +1,6 @@
-const { Schema, model, Types } = require('mongoose')
+const mongoose = require('mongoose')
 
-const userSchema = Schema({
+module.exports = mongoose.model('user', {
   userName: {
     type: String,
     required: true,
@@ -15,10 +15,5 @@ const userSchema = Schema({
     type: String,
     required: true,
   },
-  notes: [
-    {
-      type: Types.ObjectId,
-      ref: 'Event',
-    },
-  ],
+  notes: Array
 })

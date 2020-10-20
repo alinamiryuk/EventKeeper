@@ -1,8 +1,8 @@
 const express = require('express')
 const bcrypt = require('bcrypt')
 const User = require('../models/User')
-const errorHandler = require("../utils/errorHandler")
-const issueJWT = require('../utils/issueJWT')
+const errorHandler = require('../utils/errorHandler')
+const { issueJWT } = require('../utils/issueJWT')
 const router = express.Router()
 
 router.post('/signup', async (req, res) => {
@@ -23,6 +23,7 @@ router.post('/signup', async (req, res) => {
         userName: req.body.userName,
         email: req.body.email,
         password: await bcrypt.hash(req.body.password, 10),
+        notes: [],
       })
       await user.save()
 

@@ -2,20 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Login } from '../../components/Login/Login'
 import { Signup } from '../../components/Signup/Signup'
+import style from '../AuthPage/AuthPage.module.css'
 
 export const AuthPage = () => {
   return (
     <div class="card">
-      <div class="card-content">
-        <p>
-          I am a very simple card. I am good at containing small bits of
-          information. I am convenient because I require little markup to use
-          effectively.
-        </p>
-      </div>
       <div class="card-tabs">
         <ul class="tabs tabs-fixed-width" className="tabs">
-          <li class="tab"  className="tab">
+          <li class="tab" className="tab">
             <Link to="#link-login">Login</Link>
           </li>
           <li class="tab" className="tab">
