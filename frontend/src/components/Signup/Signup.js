@@ -8,11 +8,14 @@ import style from '../Signup/Signup.module.css'
 export const Signup = () => {
   const dispatch = useDispatch()
   const history = useHistory()
-  const status = useSelector((state) => state.user?.success)
+  const status = useSelector((state) => state.auth.success)
   const [state, setState] = useForm({ email: '', password: '', userName: '' })
 
   useEffect(() => {
-    if (status) history.push('/')
+    if(status){
+      console.log(status);
+       history.push('/')
+}
   }, [status])
 
   return (
