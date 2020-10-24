@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Login } from '../../components/Login/Login'
 import { Signup } from '../../components/Signup/Signup'
 import style from '../AuthPage/AuthPage.module.css'
+import { useSelector } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 
 export const AuthPage = () => {
+
+  const history = useHistory()
+  const status = useSelector((state) => state.auth.success)
+  useEffect(() => {
+    if (status) history.push('/')
+  }, [])
+  
   return (
     <div class="card">
       <div class="card-tabs">
