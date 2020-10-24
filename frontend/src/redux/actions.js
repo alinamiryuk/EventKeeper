@@ -4,7 +4,7 @@ import {
   EDIT_NOTE,
   LOGIN_AUTH,
   SIGNUP_AUTH,
-  LOGOUT_AUTH
+  LOGOUT_AUTH,
 } from './actionTypes'
 
 export const createNote = (title, text) => {
@@ -45,7 +45,7 @@ export const signupAuth = (user) => {
 export const logoutAuth = () => {
   return {
     type: LOGOUT_AUTH,
-    payload: null
+    payload: { success: false, registered: false },
   }
 }
 
@@ -68,7 +68,7 @@ export const fetchSignupAuth = (body) => async (dispatch) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body)
+    body: JSON.stringify(body),
   })
   const user = await response.json()
   localStorage.setItem('user', JSON.stringify(user))

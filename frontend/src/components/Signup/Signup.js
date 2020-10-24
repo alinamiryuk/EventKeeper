@@ -1,22 +1,12 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useHistory } from 'react-router-dom'
+import React from 'react'
+import { useDispatch } from 'react-redux'
 import { useForm } from '../../hooks/useForm'
 import { fetchSignupAuth } from '../../redux/actions'
 import style from '../Signup/Signup.module.css'
 
 export const Signup = () => {
   const dispatch = useDispatch()
-  const history = useHistory()
-  const status = useSelector((state) => state.auth.success)
   const [state, setState] = useForm({ email: '', password: '', userName: '' })
-
-  useEffect(() => {
-    if(status){
-      console.log(status);
-       history.push('/')
-}
-  }, [status])
 
   return (
     <div class="row">

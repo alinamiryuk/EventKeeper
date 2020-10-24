@@ -13,13 +13,14 @@ export const useRoutes = (auth) => {
         <Redirect to="/" />
       </Switch>
     )
+  } else {
+    return (
+      <Switch>
+        <Route path="/auth" exact>
+          <AuthPage />
+        </Route>
+        <Redirect to="/auth" />
+      </Switch>
+    )
   }
-  return (
-    <Switch>
-      <Route path="/auth" exact>
-        <AuthPage />
-      </Route>
-      <Redirect to="/auth" />
-    </Switch>
-  )
 }
