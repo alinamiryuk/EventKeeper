@@ -10,7 +10,7 @@ export const Signup = () => {
 
   return (
     <div class="row">
-      <div class="input-field col s12" className={`${style.hide} input-field col s12`}>
+      <div className={`${style.hideSpan} input-field col s12`}>
         <input
           id="email"
           type="email"
@@ -21,7 +21,7 @@ export const Signup = () => {
           onChange={setState}
         />
       </div>
-      <div class="input-field col s6" className={`${style.hide} input-field col s6`}>
+      <div className={`${style.hideSpan} input-field col s6`}>
         <input
           id="password"
           type="password"
@@ -32,7 +32,7 @@ export const Signup = () => {
           onChange={setState}
         />
       </div>
-      <div class="input-field col s6" className={`${style.hide} input-field col s6`}>
+      <div className={`${style.hideSpan} input-field col s6`}>
         <input
           placeholder="USERNAME"
           id="userName"
