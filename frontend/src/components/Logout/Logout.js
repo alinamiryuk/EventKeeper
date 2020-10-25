@@ -8,7 +8,7 @@ export const Logout = () => {
   const history = useHistory()
 
   return (
-    <div class="container">
+    <>
       <button
         onClick={() => {
           dispatch(logoutAuth())
@@ -19,6 +19,6 @@ export const Logout = () => {
       >
         <i class="material-icons">exit_to_app</i>
       </button>
-    </div>
+    </>
   )
 }

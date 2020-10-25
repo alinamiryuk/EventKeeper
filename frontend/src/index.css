@@ -86,3 +86,38 @@ textarea.valid:focus {
 .collection {
   margin: 5% 7.5% 0 7.5%;
 }
+
+.img-small {
+  width: 40px;
+  height: 40px;
+}
+
+.img-huge {
+  margin: 1em;
+  width: 15em;
+  height: 15em;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h2 {
+  margin: 0;
+  color: #3a4192;
+}
+
+.huge-text {
+  margin: 0;
+  font-size: 6em;
+  color: #3a4192;
+  
+}
+
+.span-huge-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
