@@ -44,7 +44,7 @@ export const Signup = () => {
         />
       </div>
       <button
-        class="secondary-content btn-floating waves-effect waves-light blue-grey darken-4"
+        class="secondary-content btn-floating waves-effect waves-light deep-purple darken-4"
         onClick={(e) => {
           e.preventDefault()
           dispatch(fetchSignupAuth(state))
