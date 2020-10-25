@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Login } from '../../components/Login/Login'
 import { Signup } from '../../components/Signup/Signup'
-import style from '../AuthPage/AuthPage.module.css'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
@@ -16,12 +15,12 @@ export const AuthPage = () => {
   
   return (
     <div class="card">
-      <div class="card-tabs">
-        <ul class="tabs tabs-fixed-width" className="tabs">
-          <li class="tab" className="tab">
+      <div class="card-tabs ">
+        <ul class="tabs tabs-fixed-width ">
+          <li class="tab ">
             <Link to="#link-login">Login</Link>
           </li>
-          <li class="tab" className="tab">
+          <li class="tab">
             <Link to="#link-signup">Signup</Link>
           </li>
         </ul>

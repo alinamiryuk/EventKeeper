@@ -17,7 +17,6 @@ export const Login = () => {
             id="userName"
             type="text"
             name="userName"
-            // className={`${style.userName} validate`}
             class="validate"
             value={state.userName}
             onChange={setState}
@@ -35,7 +34,7 @@ export const Login = () => {
           />
         </div>
         <button
-          class="secondary-content btn-floating waves-effect waves-light blue-grey darken-4"
+          class="secondary-content btn-floating waves-effect waves-light deep-purple darken-4"
           onClick={(e) => {
             e.preventDefault()
             dispatch(fetchLoginAuth(state))
