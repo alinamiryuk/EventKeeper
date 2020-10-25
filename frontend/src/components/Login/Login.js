@@ -2,7 +2,6 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useForm } from '../../hooks/useForm'
 import { fetchLoginAuth } from '../../redux/actions'
-import style from '../Login/Login.module.css'
 
 export const Login = () => {
   const dispatch = useDispatch()
@@ -11,7 +10,7 @@ export const Login = () => {
   return (
     <>
       <div class="row">
-        <div className={`${style.hideSpan} input-field col s12`}>
+        <div class="input-field col s12 hide-span">
           <input
             placeholder="USERNAME"
             id="userName"
@@ -22,7 +21,7 @@ export const Login = () => {
             onChange={setState}
           />
         </div>
-        <div className={`${style.hideSpan} input-field col s12`}>
+        <div class="input-field col s12 hide-span">
           <input
             id="password"
             type="password"

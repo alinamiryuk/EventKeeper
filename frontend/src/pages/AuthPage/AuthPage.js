@@ -4,16 +4,18 @@ import { Login } from '../../components/Login/Login'
 import { Signup } from '../../components/Signup/Signup'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import { Navbar } from '../../components/Navbar/Navbar'
 
 export const AuthPage = () => {
-
   const history = useHistory()
   const status = useSelector((state) => state.auth.success)
   useEffect(() => {
     if (status) history.push('/')
   }, [])
-  
+
   return (
+    <>
+    <Navbar />
     <div class="card">
       <div class="card-tabs ">
         <ul class="tabs tabs-fixed-width ">
@@ -34,5 +36,6 @@ export const AuthPage = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }

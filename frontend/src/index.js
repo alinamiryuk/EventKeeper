@@ -8,7 +8,10 @@ import { rootReducer } from './redux/rootReducer'
 import App from './App'
 import './index.css'
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+)
 
 ReactDOM.render(
   <Provider store={store}>

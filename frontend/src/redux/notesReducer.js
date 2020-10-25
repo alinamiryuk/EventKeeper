@@ -12,14 +12,22 @@ export const notesReducer = (state = initialState, action) => {
           title: action.payload.title,
           text: action.payload.text,
           completed: false,
-        }
+        },
       ]
 
-      case DELETE_NOTE:
-        return state.filter(note => note.id !== action.payload)
+    case DELETE_NOTE:
+      return state.filter((note) => note.id !== action.payload)
 
-        case EDIT_NOTE:
-          return state.map(note => note.id === action.payload.id ? {...note, title: action.payload.newTitle, text: action.payload.newText} : note)
+    case EDIT_NOTE:
+      return state.map((note) =>
+        note.id === action.payload.id
+          ? {
+              ...note,
+              title: action.payload.newTitle,
+              text: action.payload.newText,
+            }
+          : note
+      )
     default:
       return state
   }

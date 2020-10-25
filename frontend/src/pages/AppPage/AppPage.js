@@ -1,12 +1,12 @@
 import React from 'react'
 import { NoteList } from '../../components/NoteList/NoteList'
 import { NoteCreator } from '../../components/NoteCreator/NoteCreator'
-import { Logout } from '../../components/Logout/Logout'
+import { Navbar } from '../../components/Navbar/Navbar'
 
 export const AppPage = () => {
   return (
     <>
-      <Logout />
+      <Navbar />
       <NoteCreator />
       <NoteList />
     </>

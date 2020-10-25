@@ -15,5 +15,5 @@ module.exports = mongoose.model('user', {
     type: String,
     required: true,
   },
-  notes: Array
+  notes: Array,
 })
