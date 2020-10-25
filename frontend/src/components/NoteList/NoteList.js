@@ -3,13 +3,15 @@ import { useSelector } from 'react-redux'
 import { NoteListElement } from '../NoteListElement/NoteListElement'
 
 export const NoteList = () => {
-const notes = useSelector(store => store.notes)
+  const notes = useSelector((store) => store.notes)
 
   return (
     <>
-    <ul class="collection center-align">
-      {notes.map(note => (<NoteListElement key={note.id} note={note} />))}
-    </ul>
+      <ul class="collection center-align">
+        {notes.map((note) => (
+          <NoteListElement key={note.id} note={note} />
+        ))}
+      </ul>
     </>
   )
 }

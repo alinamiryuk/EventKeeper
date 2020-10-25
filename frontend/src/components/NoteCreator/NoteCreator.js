@@ -9,19 +9,28 @@ export const NoteCreator = () => {
 
   return (
     <div class="container center-align">
-      <input
-        value={input}
-        placeholder="TITLE"
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <textarea
-        value={textarea}
-        placeholder="NOTE"
-        onChange={(e) => setTextarea(e.target.value)}
-      />
+      <div class="input-field col s12 hide-span">
+        <input
+          value={input}
+          type="text"
+          placeholder="TITLE"
+          onChange={(e) => setInput(e.target.value)}
+        />
+      </div>
+      <div class="input-field hide-span">
+        <textarea
+          value={textarea}
+          placeholder="NOTE"
+          onChange={(e) => setTextarea(e.target.value)}
+        />
+      </div>
       <button
-        onClick={() => dispatch(createNote(input, textarea))}
-        class="btn-floating btn-large waves-effect waves-light blue-grey darken-4"
+        onClick={() => {
+          dispatch(createNote(input, textarea))
+          setInput('')
+          setTextarea('')
+        }}
+        class="btn-floating btn-large waves-effect waves-light deep-purple darken-4"
       >
         <i class="material-icons">add</i>
       </button>

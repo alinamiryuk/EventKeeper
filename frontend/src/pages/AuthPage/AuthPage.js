@@ -6,13 +6,12 @@ import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
 export const AuthPage = () => {
-
   const history = useHistory()
   const status = useSelector((state) => state.auth.success)
   useEffect(() => {
     if (status) history.push('/')
   }, [])
-  
+
   return (
     <div class="card">
       <div class="card-tabs ">
