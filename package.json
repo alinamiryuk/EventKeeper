@@ -3,24 +3,16 @@
   "version": "1.0.0",
   "description": "Event keeper with telegram bot",
   "main": "server.js",
-  
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
     "frontend": "npm run start --prefix frontend",
+    "frontend-install": "npm install --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alinamiryuk/EventKeeper.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alinamiryuk/EventKeeper/issues"
-  },
-  "homepage": "https://github.com/alinamiryuk/EventKeeper#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "config": "^3.3.2",

@@ -8,7 +8,7 @@ const server = http.createServer(app)
 const DB_KEY = config.get('dbkey')
 
 server.listen(PORT, (err) => {
-  if (err) console.log(err) 
+  if (err) console.log(err)
   console.log(`port ${PORT}`)
   mongoose.connect(DB_KEY, {
     useNewUrlParser: true,
