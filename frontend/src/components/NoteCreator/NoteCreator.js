@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { createNote } from '../../redux/actions'
+import { createNote } from '../../redux/notesActions'
 
 export const NoteCreator = () => {
   const [input, setInput] = useState('')

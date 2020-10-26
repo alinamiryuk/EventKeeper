@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { deleteNote, editNote } from '../../redux/actions'
+import { deleteNote, editNote } from '../../redux/notesActions'
 
 export const NoteListElement = ({ note }) => {
   const dispatch = useDispatch()
@@ -25,7 +25,7 @@ export const NoteListElement = ({ note }) => {
             <i class="material-icons">edit</i>
           </button>
           <h5>{note.title} </h5>
-          <p>{note.text}</p>
+          <h6>{note.text}</h6>
 
           {editArea ? (
             <div class="container center-align">

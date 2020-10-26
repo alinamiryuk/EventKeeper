@@ -23,7 +23,6 @@ router.post('/signup', async (req, res) => {
         userName: req.body.userName,
         email: req.body.email,
         password: await bcrypt.hash(req.body.password, 10),
-        notes: [],
       })
       await user.save()
 

@@ -5,10 +5,11 @@ import { Logout } from '../Logout/Logout'
 export const Navbar = () => {
   const checkAuth = useSelector((state) => state.auth.success)
   if (checkAuth) {
+    const userName = JSON.parse(localStorage.getItem('user')).username
     return (
       <div class="nav-container">
         <img class="img-small" src="/images/logo.png" />
-        <h2>EVENT KEEPER</h2>
+        <h4>EVENT KEEPER FOR {userName}</h4>
         <Logout />
       </div>
     )

@@ -8,7 +8,7 @@ import { rootReducer } from './redux/rootReducer'
 import App from './App'
 import './index.css'
 
-const defaultState = { auth: false, notes: [] }
+const defaultState = {}
 
 const loadState = () => {
   try {
