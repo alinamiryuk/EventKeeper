@@ -4,7 +4,7 @@
   "description": "Event keeper with telegram bot",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "concurrently \"npm run server\" \"npm run frontend\"",
     "server": "nodemon server.js",
     "frontend": "npm run start --prefix frontend",
     "frontend-install": "npm install --prefix frontend",
