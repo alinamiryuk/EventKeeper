@@ -5,13 +5,13 @@ const initialState = []
 export const notesReducer = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_NOTE:
+      
       return [
         ...state,
         {
           id: state.length === 0 ? 1 : state[state.length - 1].id + 1,
           title: action.payload.title,
           text: action.payload.text,
-          completed: false,
         },
       ]
 
