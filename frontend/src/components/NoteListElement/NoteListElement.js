@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { deleteNote, editNote } from '../../redux/actions'
+import { deleteNote, editNote } from '../../redux/notesActions'
 
 export const NoteListElement = ({ note }) => {
   const dispatch = useDispatch()

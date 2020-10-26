@@ -104,7 +104,7 @@ textarea.valid:focus {
   align-items: center;
 }
 
-h2 {
+h4 {
   margin: 0;
   color: #3a4192;
 }
@@ -113,7 +113,6 @@ h2 {
   margin: 0;
   font-size: 6em;
   color: #3a4192;
-  
 }
 
 .span-huge-text {

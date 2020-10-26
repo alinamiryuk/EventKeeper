@@ -3,12 +3,13 @@ import { useSelector } from 'react-redux'
 import { Logout } from '../Logout/Logout'
 
 export const Navbar = () => {
+  const userName = JSON.parse(localStorage.getItem('user')).username
   const checkAuth = useSelector((state) => state.auth.success)
   if (checkAuth) {
     return (
       <div class="nav-container">
         <img class="img-small" src="/images/logo.png" />
-        <h2>EVENT KEEPER</h2>
+        <h4>EVENT KEEPER FOR {userName}</h4>
         <Logout />
       </div>
     )

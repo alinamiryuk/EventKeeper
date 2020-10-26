@@ -1,32 +1,8 @@
 import {
-  CREATE_NOTE,
-  DELETE_NOTE,
-  EDIT_NOTE,
   LOGIN_AUTH,
   SIGNUP_AUTH,
   LOGOUT_AUTH,
 } from './actionTypes'
-
-export const createNote = (title, text) => {
-  return {
-    type: CREATE_NOTE,
-    payload: { title, text },
-  }
-}
-
-export const deleteNote = (id) => {
-  return {
-    type: DELETE_NOTE,
-    payload: id,
-  }
-}
-
-export const editNote = (id, newTitle, newText) => {
-  return {
-    type: EDIT_NOTE,
-    payload: { id, newTitle, newText },
-  }
-}
 
 export const loginAuth = (user) => {
   return {
@@ -74,3 +50,4 @@ export const fetchSignupAuth = (body) => async (dispatch) => {
   localStorage.setItem('user', JSON.stringify(user))
   if (user.success) dispatch(signupAuth(user))
 }
+
